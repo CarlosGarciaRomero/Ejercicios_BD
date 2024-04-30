@@ -1,7 +1,7 @@
 # EJERCICIOS FUNCIONES
 ## SUMA Y DIVISION
 1. Suma
-```sql
+```postgresql
 CREATE OR REPLACE FUNCTION Suma (num1 INT, num2 INT) RETURNS INT
 AS $$
 BEGIN
@@ -11,7 +11,7 @@ $$ LANGUAGE plpgsql;
 ```
 
 2. Division
-```sql
+```postgresql
 CREATE OR REPLACE FUNCTION Division (num1 float, num2 float) RETURNS float
 AS $function$
 BEGIN
@@ -23,7 +23,7 @@ LANGUAGE plpgsql;
 
 ## DEVOLVER LISTA DE FACTURAS ENTRE DOS FECHAS
 
-```sql
+```postgresql
 
     CREATE OR REPLACE FUNCTION FacturasEntreFechas (fecha1 DATE, fecha2 DATE)
     RETURNS TABLE (id_factura INT, fecha DATE, total DECIMAL)
@@ -40,7 +40,7 @@ LANGUAGE plpgsql;
 
 ## Función llamada Login que indique si un usuario es válido tras introducir su id y su contraseña.
 
-```sql
+```postgresql
 CREATE OR REPLACE FUNCTION Login (id_usu INT, contrasena VARCHAR(10))
 RETURNS BOOLEAN
 AS $function$
@@ -63,7 +63,7 @@ LANGUAGE plpgsql;
 
 ## Función que calcule la letra del DNI
 
-```sql
+```postgresql
 CREATE OR REPLACE FUNCTION DNI (dni INT)
 RETURNS CHAR
 AS $function$
@@ -81,7 +81,7 @@ LANGUAGE plpgsql;
 
 ## Una función que devuelva la concatenación de 2 cadenas que se le pasarán como parámetro.
 
-```sql
+```postgresql
 CREATE OR REPLACE FUNCTION Concatenar (cadena1 VARCHAR(10), cadena2 VARCHAR(10))
 RETURNS VARCHAR(20)
 AS $function$
